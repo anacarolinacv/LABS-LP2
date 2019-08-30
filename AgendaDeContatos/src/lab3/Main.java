@@ -2,6 +2,12 @@ package lab3;
 
 import java.util.Scanner;
 
+/**
+ * Classe responsavel por receber  as informacoes necessarias para o andamento do programa.
+ * @author Ana Carolina Chaves de Vasoncelos - 118110388.
+ * PROGRAMA : AGENDA DE CONTATOS.
+ */
+
 public class Main {
 
     private static String exibirMenu() {
