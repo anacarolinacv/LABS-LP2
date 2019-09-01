@@ -77,8 +77,8 @@ public class Main {
         System.out.print("Telefone: ");
         String telefone = sc.nextLine();
 
-        String contato = agenda.cadastrarContato(posicao, nome, sobrenome, telefone);
-        System.out.println(contato);
+        agenda.cadastrarContato(posicao, nome, sobrenome, telefone);
+        System.out.println("CADASTRO REALIZADO!");
     }
 
     /**

@@ -13,16 +13,14 @@ class AgendaTest {
     @Test
     void testCadastraContatoPosicaoVazia() {
         agenda = new Agenda();
-        String mensagem = "CADASTRO REALIZADO!\n";
-        assertEquals(mensagem, agenda.cadastrarContato(1, "Matheus", "Gaudêncio","(83) 99999-0000"));
+        assertTrue(agenda.cadastrarContato(1, "Matheus", "Gaudêncio","(83) 99999-0000"));
 
     }
     @Test
     void testCadastraContatoPosicaoExistente() {
         agenda = new Agenda();
-        String mensagem = "CADASTRO REALIZADO!\n";
-        assertEquals(mensagem, agenda.cadastrarContato(1, "Rossana","Chaves", "333333"));
-        assertEquals(mensagem, agenda.cadastrarContato(1, "Pedro","Silva", "(84) 98888-11111" ));
+        assertTrue(agenda.cadastrarContato(1, "Rossana","Chaves", "333333"));
+        assertTrue(agenda.cadastrarContato(1, "Pedro","Silva", "(84) 98888-11111" ));
 
         assertEquals( "Pedro Silva - (84) 98888-11111", this.agenda.exibirContato(1));
 
@@ -30,22 +28,21 @@ class AgendaTest {
     @Test
     void testCadastraContatoInvalidaMenor() {
         agenda = new Agenda();
-        String mensagem = "POSIÇÃO INVÁLIDA";
-        assertEquals(mensagem, agenda.cadastrarContato(0 , "Pedro", "Silva","(84) 98888-11111"));
+        assertFalse(agenda.cadastrarContato(0 , "Pedro", "Silva","(84) 98888-11111"));
     }
 
     @Test
     void testCadastraContatoInvalidoMaior() {
         agenda = new Agenda();
-        String mensagem = "POSIÇÃO INVÁLIDA";
-        assertEquals(mensagem, agenda.cadastrarContato(101, "Pedro", "Silva","(84) 98888-11111"));
+        assertFalse(agenda.cadastrarContato(101, "Pedro", "Silva","(84) 98888-11111"));
 
     }
     @Test
     void testCadastraContatoLimite() {
         agenda = new Agenda();
-        String mensagem = "CADASTRO REALIZADO!\n";
-        assertEquals(mensagem, agenda.cadastrarContato(100, "Silva", "Silva","3344"));
+        assertTrue(agenda.cadastrarContato(100, "Silva", "Silva","3344"));
+        assertTrue(agenda.cadastrarContato(1, "Carla", "Silva","3344"));
+
 
     }
     @Test

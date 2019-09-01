@@ -18,28 +18,44 @@ public class Agenda {
     }
 
     /**
+     * Metodo responsavel por validar a posicao do array em que o contato sera cadastrado futuramente.
+     * Caso a posicao for invalida, lanca-se uma excecao
+     * @param posicao
+     * @param nome
+     * @param sobrenome
+     * @param telefone
+     * @return String com a mensagem se a posicao eh valida ou nao
+     */
+    private String validarPosicao(int posicao, String nome, String sobrenome, String telefone) {
+        String mensagem = "";
+        try {
+            arrayContatos[posicao - 1] = new Contato(nome, sobrenome, telefone);
+        }catch (IndexOutOfBoundsException iobe) {
+            mensagem = "POSIÇÃO INVÁLIDA";
+            return mensagem;
+        }
+        return mensagem;
+    }
+    /**
      * Metoodo responsavel pelo cadastro de contatos no array de contatos. Caso tente cadastrar um objeto em um indice que nao existe, a excecao eh tratada retornando uma mensagem
      * Caso tente cadastrar um objeto em um indice em que ja tem outro objeto cadastrado, o contato eh substituido pelo mais recente cadastro.
      * @param posicao
      * @param nome
      * @param sobrenome
      * @param telefone
-     * @return String mostrando que o cadastro foi realizado com sucesso,
+     * @return boolean mostrando que o cadastro foi realizado com sucesso,
      */
-    public String cadastrarContato(int posicao, String nome, String sobrenome, String telefone) {
-        try {
-            arrayContatos[posicao - 1] = new Contato(nome, sobrenome, telefone);
-        }catch (IndexOutOfBoundsException iobe) {
-            return "POSIÇÃO INVÁLIDA";
-        }
+    public boolean cadastrarContato(int posicao, String nome, String sobrenome, String telefone) {
+        boolean valor = false;
+        validarPosicao(posicao,nome,sobrenome,telefone);
         for (int i = 0; i < this.arrayContatos.length ; i++) {
                 if ((i + 1) == posicao) {
                     arrayContatos[i] = new Contato(nome, sobrenome, telefone);
+                    valor = true;
                 }
         }
-        return "CADASTRO REALIZADO!\n";
+        return valor;
     }
-
     /**
      * Metodo responsavel por exibir um unico contato a partir da posicao recebida como parametro.
      * Caso o indice nao tenha contato cadastrado, trata-se uma excecao e retorna uma mensagem sobre o ocorrido.
@@ -72,6 +88,7 @@ public class Agenda {
                 contatos += String.format("%d - %s %s", (i + 1), this.arrayContatos[i].getNome(), this.arrayContatos[i].getSobrenome() + "\n");
             }
         }
+        contatos = contatos.substring(0,(contatos.length() - 2));
         return contatos;
     }
     /**
