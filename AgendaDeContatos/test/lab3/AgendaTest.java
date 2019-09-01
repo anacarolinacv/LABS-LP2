@@ -55,8 +55,7 @@ class AgendaTest {
     @Test
     void testExibirContatosMesmaPosicao() {
         Agenda agenda = new Agenda();
-        String mensagem = "CADASTRO REALIZADO!\n";
-        assertEquals(mensagem, agenda.cadastrarContato(10, "Silva", "Silva","3344"));
+        assertTrue(agenda.cadastrarContato(10, "Silva", "Silva","3344"));
         agenda.cadastrarContato(10, "Barbara", "Silva","3344");
         assertEquals("Barbara Silva - 3344", agenda.exibirContato(10));
 

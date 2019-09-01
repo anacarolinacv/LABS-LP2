@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ffce84a0-d18c-4999-85d3-8e097e8dd36a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Agenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/lab3/AgendaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/lab3/AgendaTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AgendaTest.testListagem">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lab3.Main" />
       <module name="AgendaDeContatos" />
@@ -115,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AgendaTest.testCadastraContatoPosicaoExistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AgendaTest.testExibirContatosMesmaPosicao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AgendaDeContatos" />
       <extension name="coverage">
         <pattern>
@@ -125,13 +123,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="lab3" />
       <option name="MAIN_CLASS_NAME" value="lab3.AgendaTest" />
-      <option name="METHOD_NAME" value="testCadastraContatoPosicaoExistente" />
+      <option name="METHOD_NAME" value="testExibirContatosMesmaPosicao" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AgendaTest.testCadastraContatoPosicaoVazia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AgendaTest.testListagem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AgendaDeContatos" />
       <extension name="coverage">
         <pattern>
@@ -141,26 +139,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="lab3" />
       <option name="MAIN_CLASS_NAME" value="lab3.AgendaTest" />
-      <option name="METHOD_NAME" value="testCadastraContatoPosicaoVazia" />
+      <option name="METHOD_NAME" value="testListagem" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AgendaTest" />
       <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.AgendaTest.testCadastraContatoPosicaoVazia" />
-      <item itemvalue="JUnit.AgendaTest.testCadastraContatoPosicaoExistente" />
       <item itemvalue="JUnit.AgendaTest.testCadastraContatoInvalidaMenor" />
+      <item itemvalue="JUnit.AgendaTest.testListagem" />
+      <item itemvalue="JUnit.AgendaTest" />
+      <item itemvalue="JUnit.AgendaTest.testExibirContatosMesmaPosicao" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AgendaTest.testListagem" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.AgendaTest.testCadastraContatoInvalidaMenor" />
-        <item itemvalue="JUnit.AgendaTest.testCadastraContatoPosicaoExistente" />
-        <item itemvalue="JUnit.AgendaTest.testCadastraContatoPosicaoVazia" />
+        <item itemvalue="JUnit.AgendaTest.testExibirContatosMesmaPosicao" />
         <item itemvalue="JUnit.AgendaTest" />
+        <item itemvalue="JUnit.AgendaTest.testCadastraContatoInvalidaMenor" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +174,7 @@
       <updated>1566904792157</updated>
       <workItem from="1567013947745" duration="12561000" />
       <workItem from="1567194240319" duration="4678000" />
-      <workItem from="1567363973328" duration="4688000" />
+      <workItem from="1567363973328" duration="5510000" />
     </task>
     <task id="LOCAL-00001" summary="Laboratório pronto!">
       <created>1567196456666</created>
@@ -192,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567196610731</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Tá, agora tá pronto mesmo. Prometo.">
+      <created>1567368757003</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567368757003</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +218,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Laboratório pronto!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laboratório pronto!" />
+    <MESSAGE value="Tá, agora tá pronto mesmo. Prometo." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tá, agora tá pronto mesmo. Prometo." />
   </component>
 </project>

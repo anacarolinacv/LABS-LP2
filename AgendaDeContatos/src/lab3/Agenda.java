@@ -88,7 +88,6 @@ public class Agenda {
                 contatos += String.format("%d - %s %s", (i + 1), this.arrayContatos[i].getNome(), this.arrayContatos[i].getSobrenome() + "\n");
             }
         }
-        contatos = contatos.substring(0,(contatos.length() - 2));
         return contatos;
     }
     /**
