@@ -91,13 +91,13 @@ public class Main {
         System.out.println("(A)locar Aluno ou (I)mprimir Grupo? ");
         String resposta = sc.nextLine().toUpperCase();
 
-        if(resposta == "A") {
+        if(resposta.equals("A")) {
             System.out.println("Matrícula: ");
             String matricula = sc.nextLine();
             System.out.println("Tema: ");
             String tema = sc.nextLine();
             System.out.println(controle.alocarAluno(matricula, tema));
-        } else if (resposta == "I") {
+        } else if (resposta.equals("I")) {
             System.out.println("Tema: ");
             String tema = sc.nextLine();
             System.out.println(controle.imprimirGrupo(tema));

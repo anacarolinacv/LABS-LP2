@@ -54,13 +54,7 @@ public class ControllerCA {
     }
 
     public String imprimirGrupo (String tema) {
-        String saida = "";
-        for (int i = 0; i < this.gruposEstudo.size() ; i++) {
-            if(!(this.gruposEstudo.get(i) == null)) {
-                saida += "* " + this.gruposEstudo.get(i).toString() + "\n";
-            }
-        }
-        return saida;
+        return this.gruposEstudo.get(tema).imprimirGrupo();
     }
 
     public String alocarAluno (String matricula, String tema) {

@@ -2,6 +2,9 @@ package control;
 
 import java.util.Objects;
 
+/**
+ * 
+ */
 public class Aluno {
     private String matricula;
     private String nome;
