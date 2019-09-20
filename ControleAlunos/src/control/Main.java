@@ -1,8 +1,6 @@
 package control;
-
 import java.sql.SQLOutput;
 import java.util.Scanner;
-
 /**
  * Sistema relacionado ao controle de alunos.
  * @author Ana Carolina Chaves de Vasconcelos
@@ -51,6 +49,7 @@ public class Main {
                     registrarAlunoQueRespondeu(controleAlunos);
                     break;
                 case "I":
+                    imprimirAlunoQueRespondeu(controleAlunos);
                     break;
                 default:
                     System.out.println("OPÇÃO INVÁLIDA!");
