@@ -143,7 +143,7 @@ public class ControllerCA {
         String saida = "";
         for (int i = 0; i < this.alunosQueResponderam.size() ; i++) {
             if(!(this.alunosQueResponderam.get(i) == null)) {
-                saida += i + "." + this.alunosQueResponderam.get(i).toString() + "\n";
+                saida += i + ". " + this.alunosQueResponderam.get(i).toString() + "\n";
             }
         }
         return saida;

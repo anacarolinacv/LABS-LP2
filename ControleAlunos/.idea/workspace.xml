@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23525d41-63fd-4b44-bcb7-e551ffb09abf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/Aluno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/ControllerCA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/ControllerCA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/GrupoEstudo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/GrupoEstudo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/control/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/Util.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568675952487</updated>
       <workItem from="1568675990927" duration="7047000" />
-      <workItem from="1568937555840" duration="3628000" />
+      <workItem from="1568937555840" duration="4181000" />
     </task>
     <task id="LOCAL-00001" summary="Sei nem o que eu fiz">
       <created>1568938529482</created>
@@ -95,7 +89,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568938529482</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Documentação finalizada, amém aleluia.">
+      <created>1569015155603</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569015155603</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Documentação finalizada, amém aleluia.">
+      <created>1569015323314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569015323314</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sei nem o que eu fiz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sei nem o que eu fiz" />
+    <MESSAGE value="Documentação finalizada, amém aleluia." />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentação finalizada, amém aleluia." />
   </component>
 </project>
