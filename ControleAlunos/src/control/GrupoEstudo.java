@@ -1,8 +1,5 @@
 package control;
-
-
 import java.util.HashSet;
-
 import java.util.Objects;
 
 /**
@@ -40,7 +37,6 @@ public class GrupoEstudo {
         return "ALUNO ALOCADO!";
     }
 
-
     /**
      * Metodo responsavel por imprimir o referente grupo concatenando os toStrings dos objetos ja cadastrados;
      * @return String com a concatenacao da representacao textual dos objetos do tipo Aluno cadastrados
@@ -55,7 +51,7 @@ public class GrupoEstudo {
 
     /**
      * Metodo responsavel por compararar a igualdade dos objetos GrupoEstudo referentes.
-     * @param o
+     * @param o objeto a ser comparado
      * @return boolean referente a comparacao.
      */
 
@@ -66,7 +62,6 @@ public class GrupoEstudo {
         GrupoEstudo that = (GrupoEstudo) o;
         return Objects.equals(tema, that.tema);
     }
-
     /**
      * Metodo que retorna o endereco de memoria do obejto relacionado.
      * @return o endereco de memoria do objeto relacionado.

@@ -3,6 +3,12 @@ package control;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
+/**
+ * Sistema relacionado ao controle de alunos.
+ * @author Ana Carolina Chaves de Vasconcelos
+ * Matricula: 118110388.
+ * UFCG
+ */
 public class Main {
     private static String exibirMenu() {
         String menu = "\n(C)adastrar aluno" + System.lineSeparator() +
@@ -12,7 +18,7 @@ public class Main {
                 "(R)egistrar aluno que respondeu" + System.lineSeparator() +
                 "(I)mprimir Alunos que responderam" + System.lineSeparator() +
                 "(O)ra, vamos fechar o programa!" + System.lineSeparator() +
-                "Opção>\n";
+                "Opção>";
         return menu;
     }
 
@@ -25,6 +31,7 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             System.out.print(exibirMenu());
             entrada = sc.nextLine().toUpperCase();
+
 
             switch (entrada) {
 
@@ -57,11 +64,11 @@ public class Main {
             System.out.println();
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Matrícula: ");
+            System.out.print("Matrícula: ");
             String matricula = sc.nextLine();
-            System.out.println("Nome: ");
+            System.out.print("Nome: ");
             String nome = sc.nextLine();
-            System.out.println("Curso: ");
+            System.out.print("Curso: ");
             String curso = sc.nextLine();
 
             System.out.println(controle.cadastrarAluno(matricula,nome,curso));
@@ -70,7 +77,7 @@ public class Main {
     private static void exibirAluno(ControllerCA controle) {
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Matrícula: ");
+            System.out.print("Matrícula: ");
             String matricula = sc.nextLine();
 
             System.out.println(controle.consultaAluno(matricula));
@@ -80,7 +87,7 @@ public class Main {
     private static void novoGrupo(ControllerCA controle) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Tema: ");
+        System.out.print("Tema: ");
         String tema = sc.nextLine();
 
         System.out.println(controle.cadastrarGrupo(tema));
@@ -89,17 +96,17 @@ public class Main {
 
     private static void alocarOuImprimir(ControllerCA controle) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("(A)locar Aluno ou (I)mprimir Grupo? ");
+        System.out.print("(A)locar Aluno ou (I)mprimir Grupo? ");
         String resposta = sc.nextLine().toUpperCase();
 
         if(resposta.equals("A")) {
-            System.out.println("Matrícula: ");
+            System.out.print("Matrícula: ");
             String matricula = sc.nextLine();
-            System.out.println("Tema: ");
+            System.out.print("Tema: ");
             String tema = sc.nextLine();
             System.out.println(controle.alocarAluno(matricula, tema));
         } else if (resposta.equals("I")) {
-            System.out.println("Tema: ");
+            System.out.print("Tema: ");
             String tema = sc.nextLine();
             System.out.println(controle.imprimirGrupo(tema));
         } else {
@@ -109,13 +116,13 @@ public class Main {
 
     private static void registrarAlunoQueRespondeu(ControllerCA controle) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Matrícula: ");
+        System.out.print("Matrícula: ");
         String matricula = sc.nextLine();
         System.out.println(controle.cadastrarAlunosQueResponderam(matricula));
 
     }
     private static void imprimirAlunoQueRespondeu(ControllerCA controle) {
-        System.out.println(controle.imprimirAlunosQueResponderam());
+        System.out.println(controle.imprimirAlunosQueResponderam() + "\n");
 
     }
 

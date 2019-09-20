@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23525d41-63fd-4b44-bcb7-e551ffb09abf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/Aluno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/ControllerCA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/ControllerCA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/GrupoEstudo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/GrupoEstudo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/Util.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,15 +26,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="998" />
-    <option name="y" value="27" />
-    <option name="width" value="906" />
-    <option name="height" value="1053" />
-  </component>
   <component name="ProjectId" id="1QwJuicdqJn6fgwoSkTD4OjtDQA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -42,6 +41,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -55,6 +55,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="control.Main" />
+      <module name="ControleAlunos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -66,8 +86,16 @@
       <option name="presentableId" value="Default" />
       <updated>1568675952487</updated>
       <workItem from="1568675990927" duration="7047000" />
-      <workItem from="1568937555840" duration="959000" />
+      <workItem from="1568937555840" duration="3628000" />
     </task>
+    <task id="LOCAL-00001" summary="Sei nem o que eu fiz">
+      <created>1568938529482</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568938529482</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,5 +111,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Sei nem o que eu fiz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sei nem o que eu fiz" />
   </component>
 </project>
