@@ -1,7 +1,8 @@
 package control;
 
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.HashSet;
+
 import java.util.Objects;
 
 /**
@@ -15,7 +16,7 @@ public class GrupoEstudo {
     /**
      * Atributo do tipo Map responsavel por armazenar objetos do tipo Aluno.
      */
-    private Map<String, Aluno> grupoAluno;
+    private HashSet<Aluno> grupoAluno;
 
     /**
      * Construtor da classe GrupoEstudo responsavel por inicializar os atributos da classe referida.
@@ -23,36 +24,31 @@ public class GrupoEstudo {
      */
     public GrupoEstudo(String tema) {
         this.tema = tema;
-        this.grupoAluno = new HashMap<>();
+        this.grupoAluno = new HashSet<>();
     }
 
     /**
      * Metodo responsavel por alocar o objeto Aluno no grupo que ele desejar.
-     * @param matricula
+     * @param aluno
      * @return String com a resposta da acao.
      */
-    public String alocarAluno(String matricula) {
-        String saida = "";
-        Util.validadorString(matricula, "Matrícula inválida!");
-        if(this.grupoAluno.containsKey(matricula)) {
-            saida = "ALUNO JÁ CADASTRADO!";
-        } else {
-            saida = "ALUNO ALOCADO!";
+    public String alocarAluno(Aluno aluno) {
+        if (aluno == null) {
+            throw new IllegalArgumentException("Aluno inválido!");
         }
-        return saida;
+        this.grupoAluno.add(aluno);
+        return "ALUNO ALOCADO!";
     }
+
 
     /**
      * Metodo responsavel por imprimir o referente grupo concatenando os toStrings dos objetos ja cadastrados;
      * @return String com a concatenacao da representacao textual dos objetos do tipo Aluno cadastrados
      */
-    public String imprimirGrupo() {
+    public String imprimirGrupo(){
         String saida = "";
-        for (int i = 0; i < this.grupoAluno.size() ; i++) {
-            if(!(this.grupoAluno.get(i) == null)) {
-                saida += "* " + this.grupoAluno.get(i).toString() + "\n";
-            }
-
+        for (Aluno aluno : this.grupoAluno) {
+            saida += "* " + aluno.toString() + "\n";
         }
         return saida;
     }

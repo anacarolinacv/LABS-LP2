@@ -41,6 +41,7 @@ public class Main {
                     alocarOuImprimir(controleAlunos);
                     break;
                 case "R":
+                    registrarAlunoQueRespondeu(controleAlunos);
                     break;
                 case "I":
                     break;
@@ -111,6 +112,10 @@ public class Main {
         System.out.println("Matrícula: ");
         String matricula = sc.nextLine();
         System.out.println(controle.cadastrarAlunosQueResponderam(matricula));
+
+    }
+    private static void imprimirAlunoQueRespondeu(ControllerCA controle) {
+        System.out.println(controle.imprimirAlunosQueResponderam());
 
     }
 

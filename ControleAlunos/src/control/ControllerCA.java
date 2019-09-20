@@ -67,7 +67,7 @@ public class ControllerCA {
         } else if (!(this.gruposEstudo.containsKey(tema))) {
             saida = "GRUPO NÃO CADASTRADO!";
         } else {
-            saida = this.gruposEstudo.get(tema).alocarAluno(matricula);
+            saida = this.gruposEstudo.get(tema).alocarAluno(this.alunos.get(matricula));
 
         }
         return saida;
