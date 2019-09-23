@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23525d41-63fd-4b44-bcb7-e551ffb09abf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/control/AlunoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/control/ControllerCATest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/control/GrupoEstudoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControleAlunos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ControleAlunos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/Aluno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/control/ControllerCA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/ControllerCA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/GrupoEstudo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/GrupoEstudo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/control/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/Util.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -23,9 +32,15 @@
   <component name="ProjectId" id="1QwJuicdqJn6fgwoSkTD4OjtDQA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -36,6 +51,14 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="control" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,9 +72,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="control.Main" />
+  <component name="RunManager" selected="JUnit.ControllerCATest.consultaAlunoCadastradoEmMatriculaJaOcupada">
+    <configuration name="ControllerCATest.cadastrarAlunosQueResponderamMatriculaInvalida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ControleAlunos" />
       <extension name="coverage">
         <pattern>
@@ -59,13 +81,85 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="control" />
+      <option name="MAIN_CLASS_NAME" value="control.ControllerCATest" />
+      <option name="METHOD_NAME" value="cadastrarAlunosQueResponderamMatriculaInvalida" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerCATest.consultaAlunoCadastradoEmMatriculaJaOcupada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ControleAlunos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="control" />
+      <option name="MAIN_CLASS_NAME" value="control.ControllerCATest" />
+      <option name="METHOD_NAME" value="consultaAlunoCadastradoEmMatriculaJaOcupada" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerCATest.imprimirAlunosQueResponderam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ControleAlunos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="control" />
+      <option name="MAIN_CLASS_NAME" value="control.ControllerCATest" />
+      <option name="METHOD_NAME" value="imprimirAlunosQueResponderam" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerCATest.imprimirGrupo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ControleAlunos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="control" />
+      <option name="MAIN_CLASS_NAME" value="control.ControllerCATest" />
+      <option name="METHOD_NAME" value="imprimirGrupo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerCATest.testAlocarAluno" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ControleAlunos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="control.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="control" />
+      <option name="MAIN_CLASS_NAME" value="control.ControllerCATest" />
+      <option name="METHOD_NAME" value="testAlocarAluno" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ControllerCATest.consultaAlunoCadastradoEmMatriculaJaOcupada" />
+        <item itemvalue="JUnit.ControllerCATest.testAlocarAluno" />
+        <item itemvalue="JUnit.ControllerCATest.imprimirGrupo" />
+        <item itemvalue="JUnit.ControllerCATest.imprimirAlunosQueResponderam" />
+        <item itemvalue="JUnit.ControllerCATest.cadastrarAlunosQueResponderamMatriculaInvalida" />
       </list>
     </recent_temporary>
   </component>
@@ -80,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568675952487</updated>
       <workItem from="1568675990927" duration="7047000" />
-      <workItem from="1568937555840" duration="4181000" />
+      <workItem from="1568937555840" duration="19302000" />
     </task>
     <task id="LOCAL-00001" summary="Sei nem o que eu fiz">
       <created>1568938529482</created>
@@ -103,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569015323314</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Documentação finalizada, amém aleluia.">
+      <created>1569015691624</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569015691624</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,5 +225,21 @@
     <MESSAGE value="Sei nem o que eu fiz" />
     <MESSAGE value="Documentação finalizada, amém aleluia." />
     <option name="LAST_COMMIT_MESSAGE" value="Documentação finalizada, amém aleluia." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/control/GrupoEstudoTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/control/ControllerCATest.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -39,11 +39,12 @@ public class ControllerCA {
     public String cadastrarAluno(String matrícula, String nome, String curso) {
         String saida = "";
         Util.validadorString(matrícula, "Matrícula inválida!");
+        Util.validadorMatricula(matrícula, "Matrícula menor do que 0");
         Util.validadorString(nome, "Nome inválido!");
         Util.validadorString(curso, "Curso inválido!");
         if(!(this.alunos.containsKey(matrícula))) {
             this.alunos.put(matrícula, new Aluno(matrícula,nome, curso));
-            saida = "CADASTRO REALIZADO";
+            saida = "CADASTRO REALIZADO!";
         } else {
             saida = "MATRÍCULA JÁ CADASTRADA!";
         }
@@ -58,8 +59,9 @@ public class ControllerCA {
     public String consultaAluno(String matricula) {
         String saida = "";
         Util.validadorString(matricula, "Matrícula inválida!");
+        Util.validadorMatricula(matricula, "Matrícula menor que 0");
         if(!(this.alunos.containsKey(matricula))) {
-            saida = "Aluno não cadastrado.";
+            saida = "ALUNO NÃO CADASTRADO!";
         } else {
             saida = this.alunos.get(matricula).toString();
         }
@@ -75,11 +77,11 @@ public class ControllerCA {
         String saida = "";
         Util.validadorString(tema, "Tema inválido!");
 
-        if(this.gruposEstudo.containsKey(tema)) {
-            saida = "GRUPO JÁ CADASTRADO!";
-        } else {
-            this.gruposEstudo.put(tema, new GrupoEstudo(tema));
+        if((!this.gruposEstudo.containsKey(tema)) && (!this.gruposEstudo.containsKey(tema.toUpperCase()))){
+            this.gruposEstudo.put(tema.toUpperCase(), new GrupoEstudo(tema));
             saida = "CADASTRO REALIZADO!";
+        } else {
+            saida = "GRUPO JÁ CADASTRADO!";
         }
         return saida;
     }
@@ -91,7 +93,8 @@ public class ControllerCA {
      */
 
     public String imprimirGrupo (String tema) {
-        return this.gruposEstudo.get(tema).imprimirGrupo();
+
+        return this.gruposEstudo.get(tema.toUpperCase()).imprimirGrupo();
     }
 
     /**
@@ -102,17 +105,21 @@ public class ControllerCA {
      */
     public String alocarAluno (String matricula, String tema) {
         String saida = "";
-        Util.validadorString(matricula, "Matrícula inválida");
+        Util.validadorString(matricula, "Matrícula inválida!");
+        Util.validadorMatricula(matricula, "Matrícula menor que 0");
         Util.validadorString(tema, "Tema inválido!");
-        if (!(this.alunos.containsKey(matricula) && this.gruposEstudo.containsKey(tema))) {
-            saida = "ALUNO E GRUPO NÃO CADASTRADOS!";
-        } else if(!(this.alunos.containsKey(matricula))) {
-            saida = "ALUNO NÃO CADASTRADO!";
-        } else if (!(this.gruposEstudo.containsKey(tema))) {
-            saida = "GRUPO NÃO CADASTRADO!";
-        } else {
-            saida = this.gruposEstudo.get(tema).alocarAluno(this.alunos.get(matricula));
+        if (!this.alunos.containsKey(matricula) && (!this.gruposEstudo.containsKey(tema.toUpperCase()))) {
+            saida = "ALUNO E GRUPO NÃO CADASTRADOS.";
         }
+        else if (!this.alunos.containsKey(matricula)) {
+            saida = "ALUNO NÃO CADASTRADO."; }
+        else if (!this.gruposEstudo.containsKey(tema.toUpperCase())) {
+            saida = "GRUPO NÃO CADASTRADO.";
+        } else {
+            saida = "ALUNO ALOCADO!";
+            this.gruposEstudo.get(tema.toUpperCase()).alocarAluno(this.alunos.get(matricula));
+        }
+
         return saida;
     }
 
@@ -125,6 +132,7 @@ public class ControllerCA {
     public String cadastrarAlunosQueResponderam(String matricula) {
         String saida = "";
         Util.validadorString(matricula, "Matrícula inválida");
+        Util.validadorMatricula(matricula, "Matrícula menor que 0");
         if(!(this.alunos.containsKey(matricula))) {
             saida = "ALUNO NÃO CADASTRADO!";
         } else {
@@ -143,9 +151,10 @@ public class ControllerCA {
         String saida = "";
         for (int i = 0; i < this.alunosQueResponderam.size() ; i++) {
             if(!(this.alunosQueResponderam.get(i) == null)) {
-                saida += i + ". " + this.alunosQueResponderam.get(i).toString() + "\n";
+                saida += i + 1 + ". " + this.alunosQueResponderam.get(i).toString() + "\n";
             }
         }
-        return saida;
+
+        return "Alunos:\n" + saida;
     }
 }

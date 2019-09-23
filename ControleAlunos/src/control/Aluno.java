@@ -26,6 +26,9 @@ public class Aluno {
      * @param curso
      */
     public Aluno(String matricula, String nome, String curso) {
+        Util.validadorString(matricula, "Matrícula inválida!");
+        Util.validadorString(nome, "Nome inválido");
+        Util.validadorString(curso, "Curso inválido!");
         this.matricula = matricula;
         this.nome = nome;
         this.curso = curso;

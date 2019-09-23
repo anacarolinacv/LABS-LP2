@@ -25,6 +25,15 @@ public class GrupoEstudo {
     }
 
     /**
+     * Retorna o tema do objeto GrupoEstudo relacionado.
+     * @return String com o tema do objeto
+     */
+
+    public String getTema() {
+        return tema;
+    }
+
+    /**
      * Metodo responsavel por alocar o objeto Aluno no grupo que ele desejar.
      * @param aluno
      * @return String com a resposta da acao.
@@ -43,10 +52,13 @@ public class GrupoEstudo {
      */
     public String imprimirGrupo(){
         String saida = "";
+        String entrada = "";
         for (Aluno aluno : this.grupoAluno) {
             saida += "* " + aluno.toString() + "\n";
         }
-        return saida;
+
+        entrada = "Alunos do grupo " + this.getTema() + ":\n";
+        return entrada + saida;
     }
 
     /**
@@ -70,4 +82,6 @@ public class GrupoEstudo {
     public int hashCode() {
         return Objects.hash(tema);
     }
+
+
 }

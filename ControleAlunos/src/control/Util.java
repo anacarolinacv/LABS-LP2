@@ -17,4 +17,11 @@ public class Util {
             throw new NullPointerException(mensagem);
         }
     }
+
+    public static void validadorMatricula(String matricula, String mensagem) {
+        int numeroMatricula = Integer.parseInt(matricula);
+        if(numeroMatricula < 0) {
+            throw new IllegalArgumentException(mensagem);
+        }
+    }
 }
