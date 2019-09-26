@@ -12,6 +12,9 @@ public class Fornecedor {
 
 
     public Fornecedor(String nome, String email, String telefone) {
+        Util.validadorString(nome,"Nome inválido!");
+        Util.validadorString(email, "Email inválido!");
+        Util.validadorString(telefone,"Telefone inválido!");
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;

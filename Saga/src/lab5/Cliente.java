@@ -9,6 +9,9 @@ public class Cliente {
     private String localizacao;
 
     public Cliente(String cpf, String nome, String email, String localizacao) {
+        Util.validadorString(cpf,"Cpf inválido!");
+        Util.validadorString(nome, "Nome inválido!");
+        Util.validadorString(localizacao,"Localização inválida!");
         this.cpf = cpf;
         this.nome = nome;
         this.email = email;

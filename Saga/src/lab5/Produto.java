@@ -8,6 +8,9 @@ public class Produto {
     private String descricao;
 
     public Produto(String preco, String nome, String descricao) {
+        Util.validadorString(preco,"Preço inválido!");
+        Util.validadorString(nome, "Nome inválido!");
+        Util.validadorString(descricao,"Descrição inválida!");
         this.preco = preco;
         this.nome = nome;
         this.descricao = descricao;
@@ -18,6 +21,7 @@ public class Produto {
     }
 
     public void setPreco(String preco) {
+
         this.preco = preco;
     }
 
