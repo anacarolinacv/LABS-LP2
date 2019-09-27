@@ -49,4 +49,7 @@ public class CRUDCliente {
             this.clientes.remove(cpf);
         }
     }
+    public void editaCadastroCliente(String cpf, String parametro, String parametroNovo) {
+        this.clientes.get(cpf).editorCadastroCliente(parametro, parametroNovo);
+    }
 }

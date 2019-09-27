@@ -18,18 +18,6 @@ public class Cliente {
         this.localizacao = localizacao;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
-    }
-
     public String getCpf() {
         return cpf;
     }
@@ -46,6 +34,23 @@ public class Cliente {
         return localizacao;
     }
 
+    public void editorCadastroCliente(String atributo, String atributoNovo) {
+        switch (atributo.toUpperCase()) {
+            case "NOME":
+                this.nome = atributoNovo;
+                break;
+
+            case "EMAIL":
+                this.email = atributoNovo;
+                break;
+
+            case "LOCALIZACAO":
+                this.localizacao = atributoNovo;
+                break;
+            default:
+                System.out.println("Paramêtro inválido!");
+        }
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

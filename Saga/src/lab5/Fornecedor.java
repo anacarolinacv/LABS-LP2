@@ -41,6 +41,10 @@ public class Fornecedor {
         return saida;
     }
 
+    public Map<String, Produto> getProdutos() {
+        return produtos;
+    }
+
     public String exibeProdutosDoFornecedor() {
         String saida = "";
         for (int i = 0; i < this.produtos.size() ; i++) {
@@ -48,6 +52,11 @@ public class Fornecedor {
         }
         saida = saida.substring(0, this.produtos.size() -1);
         return saida;
+    }
+
+    public void editaPrecoProduto(String precoNovo, String nome, String descricao ) {
+        String chave = nome + descricao;
+        this.produtos.get(chave).setPreco(precoNovo);
     }
     public void removeProduto(String nome, String descricao) {
         Util.validadorString(nome, "Nome inválido!");
@@ -59,14 +68,20 @@ public class Fornecedor {
             this.produtos.remove(chave);
         }
     }
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
+    public void editorFornecedor(String atributo, String atributoNovo) {
+        switch (atributo.toUpperCase()) {
+            case "EMAIL":
+                this.email = atributoNovo;
+                break;
 
+            case "TELEFONE":
+                this.telefone = atributoNovo;
+                break;
+            default:
+                System.out.println("Paramêtro inválido!");
+        }
+    }
     public String getNome() {
         return nome;
     }

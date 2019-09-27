@@ -2,11 +2,29 @@ package lab5;
 
 import java.util.Objects;
 
+/**
+ * Classe Produto responsavel por criar objetos do tipo Produto com atributos especificos.
+ */
 public class Produto {
+    /**
+     * Atributo responsavel por armazenar o preco do objeto do tipo Produto
+     */
     private String preco;
+    /**
+     * Atributo responsavel por armazenar o nome do objeto do tipo Produto
+     */
     private String nome;
+    /**
+     * Atributo responsavel por armazenar a descricao do objeto do tipo Produto
+     */
     private String descricao;
 
+    /**
+     * Construtor da classe Produto responsavel por construir objetos a partir dos atributos da classe relacionada, validando-os antes.
+     * @param preco
+     * @param nome
+     * @param descricao
+     */
     public Produto(String preco, String nome, String descricao) {
         Util.validadorString(preco,"Preço inválido!");
         Util.validadorString(nome, "Nome inválido!");
