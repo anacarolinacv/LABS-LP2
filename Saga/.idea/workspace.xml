@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c3993c-8d24-40ac-8cc2-427aecffbaec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab5/Facade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/CRUDCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab5/CRUDCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/CRUDFornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab5/CRUDFornecedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab5/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/Fornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab5/Fornecedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab5/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab5/Util.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +60,7 @@
       <updated>1569534706536</updated>
       <workItem from="1569534710936" duration="93000" />
       <workItem from="1569534901119" duration="5192000" />
-      <workItem from="1569540402393" duration="6374000" />
+      <workItem from="1569540402393" duration="7541000" />
     </task>
     <task id="LOCAL-00001" summary="Me enganei, não estava pronto rs">
       <created>1569540675206</created>
@@ -77,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569540675207</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Mudanças e etc">
+      <created>1569602832365</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569602832365</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +95,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Me enganei, não estava pronto rs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Me enganei, não estava pronto rs" />
+    <MESSAGE value="Mudanças e etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudanças e etc" />
   </component>
 </project>
