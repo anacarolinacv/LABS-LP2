@@ -1,5 +1,4 @@
 package lab5;
-
 /**
  * Classe Util responsavel por armazenar metodo de validacao de String
  */
