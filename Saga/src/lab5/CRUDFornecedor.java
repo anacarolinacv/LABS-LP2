@@ -54,6 +54,9 @@ public class CRUDFornecedor {
     public String exibeFornecedor(String nome) {
         Util.validadorString(nome, "Nome inválido!");
         String saida = "";
+        if(!(this.fornecedores.containsKey(nome))) {
+            throw new IllegalArgumentException("Fornecedor não cadastrado!");
+        }
         saida = this.fornecedores.get(nome).toString();
         return saida;
     }

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c3993c-8d24-40ac-8cc2-427aecffbaec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/lab5/CRUDClienteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lab5/CRUDFornecedorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lab5/ClienteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lab5/FornecedorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/lab5/ProdutoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saga.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Saga.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab5/CRUDCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab5/CRUDCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab5/CRUDFornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab5/CRUDFornecedor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab5/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab5/Cliente.java" afterDir="false" />
@@ -20,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -29,9 +36,15 @@
   <component name="ProjectId" id="1ROOWTbtuDU9xTo1lqZ28owW928" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -41,6 +54,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="lab5" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -66,7 +87,8 @@
       <updated>1569534706536</updated>
       <workItem from="1569534710936" duration="93000" />
       <workItem from="1569534901119" duration="5192000" />
-      <workItem from="1569540402393" duration="15687000" />
+      <workItem from="1569540402393" duration="17839000" />
+      <workItem from="1569863590359" duration="10031000" />
     </task>
     <task id="LOCAL-00001" summary="Me enganei, não estava pronto rs">
       <created>1569540675206</created>
@@ -82,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569602832365</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Documentação finalizada">
+      <created>1569721246229</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569721246229</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,7 +122,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -102,6 +133,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Me enganei, não estava pronto rs" />
     <MESSAGE value="Mudanças e etc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mudanças e etc" />
+    <MESSAGE value="Documentação finalizada" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentação finalizada" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/lab5/CRUDClienteTest.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -74,6 +74,7 @@ public class Cliente {
      * @param atributoNovo
      */
     public void editorCadastroCliente(String atributo, String atributoNovo) {
+
         switch (atributo.toUpperCase()) {
             case "NOME":
                 this.nome = atributoNovo;

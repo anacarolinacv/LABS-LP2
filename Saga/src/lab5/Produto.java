@@ -59,7 +59,13 @@ public class Produto {
     public String getDescricao() {
         return descricao;
     }
-
+    /**
+     * Metodo responsavel por retornar a identificacao do objeto Produto no mapa de produtos do sistema
+     * @return String com a chave do objeto Produto
+     */
+    public String getChave() {
+        return nome + descricao;
+    }
     /**
      * Metodo responsavel por comparar dois objetos do Tipo Produto de acordo com o nome e a descricao dele.
      * @param o

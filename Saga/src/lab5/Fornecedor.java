@@ -46,8 +46,9 @@ public class Fornecedor {
      * @param nome
      * @param descricao
      */
-    public void cadastraProduto(String preco, String nome, String descricao) {
-        Util.validadorString(preco,"Preço inválido!");
+    public boolean cadastraProduto(String preco, String nome, String descricao) {
+        boolean saida = false;
+        Util.validadorPreco(preco,"Preço inválido!");
         Util.validadorString(nome, "Nome inválido!");
         Util.validadorString(descricao, "Descrição inválida!");
         String chave = nome + descricao;
@@ -55,7 +56,9 @@ public class Fornecedor {
             throw new IllegalArgumentException("Produto já cadastrado!");
         } else {
             this.produtos.put(chave, new Produto(preco, nome, descricao));
+            saida = true;
         }
+        return saida;
     }
 
     /**
@@ -69,6 +72,9 @@ public class Fornecedor {
         Util.validadorString(descricao, "Descrição inválida!");
         String saida = "";
         String chave = nome + descricao;
+        if(!(this.produtos.containsKey(chave))) {
+            throw new IllegalArgumentException("Produto não cadastrado!");
+        }
         saida = this.produtos.get(chave).toString();
         return saida;
     }
@@ -80,9 +86,9 @@ public class Fornecedor {
     public String exibeProdutosDoFornecedor() {
         String saida = "";
         for (int i = 0; i < this.produtos.size() ; i++) {
-            saida += getNome() + this.produtos.get(i).toString() + "|";
+            saida += getNome() + "-" + this.produtos.get(i).toString() + " | ";
         }
-        saida = saida.substring(0, this.produtos.size() -1);
+        saida = saida.substring(0, this.produtos.size() -3);
         return saida;
     }
 
@@ -93,6 +99,9 @@ public class Fornecedor {
      * @param descricao
      */
     public void editaPrecoProduto(String precoNovo, String nome, String descricao ) {
+        Util.validadorPreco(precoNovo, "Preço novo inválido");
+        Util.validadorString(nome, "Nome inválido!");
+        Util.validadorString(descricao, "Descrição inválida!");
         String chave = nome + descricao;
         this.produtos.get(chave).setPreco(precoNovo);
     }

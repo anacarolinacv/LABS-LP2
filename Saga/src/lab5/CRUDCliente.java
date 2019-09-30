@@ -49,6 +49,9 @@ public class CRUDCliente {
      */
     public String exibeCliente(String cpf) {
         Util.validadorString(cpf, "Cpf inválido!");
+        if(!(this.clientes.containsKey(cpf))) {
+            throw new IllegalArgumentException("Cliente não cadastrado");
+        }
         String saida = this.clientes.get(cpf).toString();
         return saida;
     }
@@ -60,7 +63,7 @@ public class CRUDCliente {
     public String exibeTodosOsClientes() {
         String saida = "";
         for (int i = 0; i < this.clientes.size() ; i++) {
-            saida += this.clientes.get(i).toString() + "|";
+            saida += this.clientes.get(i).toString() + " | ";
         }
         saida = saida.substring(0, clientes.size() -1);
         return saida;
