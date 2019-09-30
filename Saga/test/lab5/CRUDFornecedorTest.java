@@ -12,7 +12,6 @@ class CRUDFornecedorTest {
     void setUp() {
         this.controle1 = new CRUDFornecedor();
     }
-
     @Test
     void cadastraFornecedor() {
         assertEquals("Zé luis", this.controle1.cadastraFornecedor("carol", "carol@gmail.com", "40028922"));
