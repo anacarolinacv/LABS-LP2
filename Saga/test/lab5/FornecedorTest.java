@@ -17,19 +17,19 @@ class FornecedorTest {
 
     @Test
     void cadastraProdutoAindaNaoCadastrado() {
-        assertTrue(this.f1.cadastraProduto("2.50","Refri","Refri sabor guaraná"));
-        assertThrows(IllegalArgumentException.class, () -> this.f1.cadastraProduto("","Refri","Refri sabor guaraná"));
-        assertThrows(NullPointerException.class, () -> this.f1.cadastraProduto(null,"Refri","Refri sabor guaraná"));
+        assertTrue(this.f1.adicionaProduto("refri","refri de guarana",5.0));
+        assertThrows(IllegalArgumentException.class, () -> this.f1.adicionaProduto("Refri","Refri sabor guaraná",5.0));
+        assertThrows(NullPointerException.class, () -> this.f1.adicionaProduto("Refri","Refri sabor guaraná",4.0));
     }
     @Test
     void cadastraProdutoJaCadastrado() {
-        assertTrue(this.f1.cadastraProduto("2.50","Refri","Refri sabor guaraná"));
-        assertThrows(IllegalArgumentException.class, () -> this.f1.cadastraProduto("2.50","Refri","Refri sabor guaraná"));
+        assertTrue(this.f1.adicionaProduto("Refri","Refri sabor guaraná",5.0));
+        assertThrows(IllegalArgumentException.class, () -> this.f1.adicionaProduto("Refri","Refri sabor guaraná",5.0));
     }
 
     @Test
     void testExibirProduto() {
-        f1.cadastraProduto("2.50", "bbb", "blablabla");
+        f1.adicionaProduto("suco", "bbb", 5.0);
         assertEquals("bbb - blablabla - R$2.50", this.f1.exibeProduto("bbb","blablabla"));
         try {
             f1.exibeProduto("  ", "b");
@@ -53,32 +53,32 @@ class FornecedorTest {
 
     @Test
     void exibeProdutosDoFornecedor() {
-        f1.cadastraProduto("2.50", "aaa", "blablabla");
-        f1.cadastraProduto("2.50", "bbb", "blebleble");
-        f1.cadastraProduto("2.50", "ccc", "bliblibli");
+        f1.adicionaProduto("doce", "bbb", 5.0);
+        f1.adicionaProduto("balinha", "bbb", 5.0);
+        f1.adicionaProduto("bolacha", "bbb", 5.0);
 
-        assertEquals("Carol - aaa - blablabla - R$2.50 | Carol - bbb - blebleble - R$2.50 | Carol - ccc - bliblibli - R$2.50", this.f1.exibeProdutosDoFornecedor());
+        assertEquals("Carol - doce - bbb - R$5,0 | Carol - balinha - bbb - R$5,0 | Carol - bolacha - bbb - R$5.0", this.f1.exibeProdutosDoFornecedor());
     }
 
     @Test
     void editaPrecoProduto() {
-        f1.cadastraProduto("2.50", "b", "Produto fragil");
-        f1.editaPrecoProduto("4.50", "b", "Produto fragil");
-        assertEquals("a - b - R$4.50", this.f1.exibeProduto("a", "Produto fragil"));
+        f1.adicionaProduto("suco", "bbb", 5.0);
+        f1.editaProduto(4.50, "suco", "bbb");
+        assertEquals("suco - bbb - R$4,50", this.f1.exibeProduto("suco", "bbb"));
         try {
-            f1.editaPrecoProduto("A", "b", "Produto fragil");
+            f1.editaProduto(4.50, "b", "Produto fragil");
             fail();
         } catch (IllegalArgumentException erro) {
             assertEquals("Preço novo inválido!", erro.getMessage());
         }
         try {
-            f1.editaPrecoProduto("2.50", "  ", "Produto fragil");
+            f1.editaProduto(2.50, "  ", "Produto fragil");
             fail();
         } catch (IllegalArgumentException erro) {
             assertEquals("Nome inválido!", erro.getMessage());
         }
         try {
-            f1.editaPrecoProduto("2.50", "pó", "");
+            f1.editaProduto(2.50, "camisa", "");
             fail();
         } catch (IllegalArgumentException erro) {
             assertEquals("Descrição inválida!", erro.getMessage());
@@ -87,10 +87,9 @@ class FornecedorTest {
 
     @Test
     void removeProduto() {
-        f1.cadastraProduto("2.50", "aaa", "Suco de laranja");
-        f1.cadastraProduto("5.00", "bbb", "Suco de morango");
-        f1.removeProduto("aaa", "Suco de laranja");
-        assertEquals("bbb - Suco de morango - R$5.00" , f1.exibeProdutosDoFornecedor());
+        f1.adicionaProduto("suco", "bbb", 5.0);
+        f1.removeProduto("suco", "bbb");
+        assertEquals("" , f1.exibeProdutosDoFornecedor());
         try {
             f1.removeProduto("", "b");
             fail();

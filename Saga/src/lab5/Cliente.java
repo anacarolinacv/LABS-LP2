@@ -74,7 +74,9 @@ public class Cliente {
      * @param atributoNovo
      */
     public void editorCadastroCliente(String atributo, String atributoNovo) {
-
+        if(atributo.toUpperCase() == "CPF") {
+            throw new IllegalArgumentException("Erro na edicao do cliente: cpf nao pode ser editado.");
+        }
         switch (atributo.toUpperCase()) {
             case "NOME":
                 this.nome = atributoNovo;
@@ -88,7 +90,7 @@ public class Cliente {
                 this.localizacao = atributoNovo;
                 break;
             default:
-                System.out.println("Paramêtro inválido!");
+               throw new IllegalArgumentException("Erro na edicao do cliente: atributo nao existe.");
         }
     }
 

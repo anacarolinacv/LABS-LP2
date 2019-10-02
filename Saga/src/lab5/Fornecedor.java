@@ -46,16 +46,16 @@ public class Fornecedor {
      * @param nome
      * @param descricao
      */
-    public boolean cadastraProduto(String preco, String nome, String descricao) {
+    public boolean adicionaProduto( String nome, String descricao, double preco) {
         boolean saida = false;
-        Util.validadorPreco(preco,"Preço inválido!");
-        Util.validadorString(nome, "Nome inválido!");
-        Util.validadorString(descricao, "Descrição inválida!");
+        Util.validadorPreco(preco,"Erro no cadastro de produto: preco invalido.");
+        Util.validadorString(nome, "Erro no cadastro de produto: nome nao pode ser vazia ou nula.");
+        Util.validadorString(descricao, "Erro no cadastro de produto: descricao nao pode ser vazia ou nula.");
         String chave = nome + descricao;
         if(this.produtos.containsKey(chave)) {
-            throw new IllegalArgumentException("Produto já cadastrado!");
+            throw new IllegalArgumentException("Erro no cadastro de produto: produto ja existe.");
         } else {
-            this.produtos.put(chave, new Produto(preco, nome, descricao));
+            this.produtos.put(chave, new Produto(nome, descricao, preco));
             saida = true;
         }
         return saida;
@@ -68,12 +68,12 @@ public class Fornecedor {
      * @return String com a representacao textual do objeto Produto relacionado a chave
      */
     public String exibeProduto(String nome, String descricao) {
-        Util.validadorString(nome, "Nome inválido!");
-        Util.validadorString(descricao, "Descrição inválida!");
+        Util.validadorString(nome, "Erro na exibicao de produto: nome nao pode ser vazio ou nulo.");
+        Util.validadorString(descricao, "Erro na exibicao de produto: descricao nao pode ser vazio ou nulo.");
         String saida = "";
         String chave = nome + descricao;
         if(!(this.produtos.containsKey(chave))) {
-            throw new IllegalArgumentException("Produto não cadastrado!");
+            throw new IllegalArgumentException("Erro na exibicao de produto: produto nao existe.");
         }
         saida = this.produtos.get(chave).toString();
         return saida;
@@ -98,10 +98,10 @@ public class Fornecedor {
      * @param nome
      * @param descricao
      */
-    public void editaPrecoProduto(String precoNovo, String nome, String descricao ) {
-        Util.validadorPreco(precoNovo, "Preço novo inválido");
-        Util.validadorString(nome, "Nome inválido!");
-        Util.validadorString(descricao, "Descrição inválida!");
+    public void editaProduto(double precoNovo, String nome, String descricao ) {
+        Util.validadorPreco(precoNovo, "Erro na edicao de produto: preco invalido.");
+        Util.validadorString(nome, "Erro na edicao de produto: descricao nao pode ser vazio ou nulo.");
+        Util.validadorString(descricao, "Erro na edicao de produto: descricao nao pode ser vazia ou nula.");
         String chave = nome + descricao;
         this.produtos.get(chave).setPreco(precoNovo);
     }
@@ -112,11 +112,11 @@ public class Fornecedor {
      * @param descricao
      */
     public void removeProduto(String nome, String descricao) {
-        Util.validadorString(nome, "Nome inválido!");
-        Util.validadorString(descricao, "Descrição inválida!");
+        Util.validadorString(nome, "Erro na edicao de produto: nome nao pode ser vazio ou nulo.");
+        Util.validadorString(descricao, "Erro na edicao de produto: descricao nao pode ser vazia ou nula.");
         String chave = nome + descricao;
         if(!(this.produtos.containsKey(chave))) {
-            throw new IllegalArgumentException("Produto não cadastrado!");
+            throw new IllegalArgumentException("Erro na edicao de produto: produto nao existe.");
         } else {
             this.produtos.remove(chave);
         }
@@ -132,12 +132,11 @@ public class Fornecedor {
             case "EMAIL":
                 this.email = atributoNovo;
                 break;
-
             case "TELEFONE":
                 this.telefone = atributoNovo;
                 break;
             default:
-                System.out.println("Paramêtro inválido!");
+                throw new IllegalArgumentException("Erro na edicao do fornecedor: atributo nao existe.");
         }
     }
     /**

@@ -26,19 +26,23 @@ public class CRUDCliente {
      * @param local
      * @return String com o cpf do cliente cadastrado.
      */
-    public String cadastraCliente(String cpf, String nome, String email, String local) {
-        Util.validadorString(cpf, "Cpf inválido!");
-        Util.validadorString(nome, "Nome inválido!");
-        Util.validadorString(email, "Email inválido!");
-        Util.validadorString(local, "Localização inválida!");
+    public String adicionaCliente(String cpf, String nome, String email, String local) {
+        Util.validadorString(cpf, "Erro no cadastro do cliente: cpf nao pode ser vazio ou nulo.");
+        Util.validadorString(nome, "Erro no cadastro do cliente: nome nao pode ser vazio ou nulo.");
+        Util.validadorString(email, "Erro no cadastro do cliente: email nao pode ser vazio ou nulo.");
+        Util.validadorString(local, "Erro no cadastro do cliente: localizacao nao pode ser vazia ou nula.");
+        Util.validadorCpf(cpf, "Erro no cadastro do cliente: cpf invalido.");
         String saida = "";
 
         if(this.clientes.containsKey(cpf)) {
-            throw new IllegalArgumentException("Cliente já cadastrado!");
-        } else {
-            this.clientes.put(cpf, new Cliente(cpf, nome, email, local));
-            saida = this.clientes.get(cpf).getCpf();
+            throw new IllegalArgumentException("Erro no cadastro do cliente: cliente ja existe.");
         }
+        if(cpf.length() != 11) {
+            throw new IllegalArgumentException("Erro no cadastro do cliente: cpf invalido.");
+        }
+        this.clientes.put(cpf, new Cliente(cpf, nome, email, local));
+        saida = this.clientes.get(cpf).getCpf();
+
         return saida;
     }
 
@@ -48,9 +52,9 @@ public class CRUDCliente {
      * @return String com a representacao textual do objeto Cliente
      */
     public String exibeCliente(String cpf) {
-        Util.validadorString(cpf, "Cpf inválido!");
+        Util.validadorString(cpf, "Erro na exibicao do cliente: cpf nao pode ser vazio ou nulo.");
         if(!(this.clientes.containsKey(cpf))) {
-            throw new IllegalArgumentException("Cliente não cadastrado");
+            throw new IllegalArgumentException("Erro na exibicao do cliente: cliente nao existe.");
         }
         String saida = this.clientes.get(cpf).toString();
         return saida;
@@ -73,22 +77,35 @@ public class CRUDCliente {
      * Metodo responsavel por remover do mapa de clientes o objeto Cliente ja cadastrado a partir do cpf recebido como parametro.
      * @param cpf
      */
-    public void removeCliente(String cpf) {
-        Util.validadorString(cpf, "Cpf inválido!");
+    public String removeCliente(String cpf) {
+        String saida = "";
+        Util.validadorString(cpf, "Erro na remocao do cliente: cpf nao pode ser vazio ou nulo");
         if(!(this.clientes.containsKey(cpf))) {
-            throw new IllegalArgumentException("Cliente não cadastrado!");
+            throw new IllegalArgumentException("Erro na remocao do cliente: cliente nao existe.");
         } else {
+            saida = exibeCliente(cpf);
             this.clientes.remove(cpf);
         }
+        return saida;
     }
 
     /**
      * Metodo responsavel por editar o cadastro do objeto Cliente relacionado pelo cpf recebido como parametro.
      * @param cpf
-     * @param parametro
-     * @param parametroNovo
+     * @param atributo
+     * @param atributoNovo
      */
-    public void editaCadastroCliente(String cpf, String parametro, String parametroNovo) {
-        this.clientes.get(cpf).editorCadastroCliente(parametro, parametroNovo);
+    public void editaCliente(String cpf, String atributo, String atributoNovo) {
+        Util.validadorString(atributo,"Erro na edicao do cliente: atributo nao pode ser vazio ou nulo.");
+        Util.validadorString(atributoNovo,"Erro na edicao do cliente: novo valor nao pode ser vazio ou nulo.");
+        Util.validadorString(cpf, "Erro na edicao do cliente: cpf nao pode ser vazio ou nulo.");
+
+        if(atributo.toUpperCase() == "CPF") {
+            throw new IllegalArgumentException("Erro na edicao do cliente: cpf nao pode ser editado.");
+        }
+        if(!(this.clientes.containsKey(cpf))) {
+            throw new IllegalArgumentException("Erro na edicao do cliente: cliente nao existe.");
+        }
+        this.clientes.get(cpf).editorCadastroCliente(atributo,atributoNovo);
     }
 }

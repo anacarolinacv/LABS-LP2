@@ -11,8 +11,8 @@ class ProdutoTest {
 
     @BeforeEach
     void setUp() {
-        this.p1 = new Produto("2.50","Refri","Refri de guaraná");
-        this.p2 = new Produto("3.00","Coxinha","Coxinha de frango");
+        this.p1 = new Produto("Suco","Refri",5.0);
+        this.p2 = new Produto("Torta","Torta de limao",5.9);
 
     }
 
@@ -25,10 +25,10 @@ class ProdutoTest {
 
     @Test
     void setPreco() {
-        this.p1.setPreco("4.00");
-        assertEquals("4.00", this.p1.getPreco());
-        this.p2.setPreco("2.00");
-        assertNotEquals("3.00", this.p2.getPreco());
+        this.p1.setPreco(4.00);
+        assertEquals(4.00, this.p1.getPreco());
+        this.p2.setPreco(2.00);
+        assertNotEquals(3.00, this.p2.getPreco());
     }
 
     @Test
@@ -47,21 +47,21 @@ class ProdutoTest {
 
     @Test
     void testEquals() {
-        Produto p3 = new Produto("2.50", "Refri","Refri de guaraná");
+        Produto p3 = new Produto("Refri", "Refri",5.0);
         assertFalse(p2.getChave().equals(p1.getChave()));
         assertTrue(p1.getChave().equals(p3.getChave()));
     }
 
     @Test
     void testHashCode() {
-        Produto p3 = new Produto("2.50", "Refri","Refri de guaraná");
+        Produto p3 = new Produto("Suco", "Refri",5.0);
         assertTrue(p1.hashCode() == p3.hashCode());
         assertFalse(p2.hashCode() == p3.hashCode());
     }
 
     @Test
     void testToString() {
-        assertEquals("Refri - Refri de guaraná - R$2.50", this.p1.toString());
-        assertNotEquals("Refri - Suco de guaraná - R$2.50", this.p2.toString());
+        assertEquals("Refri - Refri de guaraná - R$2,50", this.p1.toString());
+        assertNotEquals("Refri - Suco de guaraná - R$2,50", this.p2.toString());
     }
 }

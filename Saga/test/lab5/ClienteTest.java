@@ -105,6 +105,37 @@ class ClienteTest {
         this.c1.editorCadastroCliente("email", "carol@gmail");
         this.c1.editorCadastroCliente("nome","Fernanda");
         this.c1.editorCadastroCliente("localização","RJ");
+        try {
+            this.c1.editorCadastroCliente(" ", "carol@gmail");
+            fail();
+        } catch (IllegalArgumentException erro) {
+            assertEquals("Erro na edicao do cliente: atributo nao pode ser vazio ou nulo.", erro.getMessage());
+        }
+        try {
+            this.c1.editorCadastroCliente("email", "");
+            fail();
+        } catch (IllegalArgumentException erro) {
+            assertEquals("Erro na edicao do cliente: novo valor nao pode ser vazio ou nulo.", erro.getMessage());
+        }
+        try {
+            this.c1.editorCadastroCliente("", "CG");
+            fail();
+        } catch (IllegalArgumentException erro) {
+            assertEquals("Erro na edicao do cliente: atributo nao pode ser vazio ou nulo.", erro.getMessage());
+        }
+        try {
+            this.c1.editorCadastroCliente("localização", "");
+            fail();
+        } catch (IllegalArgumentException erro) {
+            assertEquals("Erro na edicao do cliente: novo valor nao pode ser vazio ou nulo.", erro.getMessage());
+        }
+        try {
+            this.c1.editorCadastroCliente("marca", "hope");
+            fail();
+        } catch (IllegalArgumentException erro) {
+            assertEquals("Erro na edicao do cliente: atributo nao existe.", erro.getMessage());
+        }
+
     }
 
     @Test
