@@ -1,61 +1,45 @@
 package produtos;
 
 import calculoFator.Fator;
-import ids.ComboID;
-import ids.Id;
 
 import java.util.Objects;
 
-public class Combo {
-    private String nomeCombo;
-    private String descricaoCombo;
+public class Combo extends ProdutoAbstract {
+
     private Fator calculoCombo;
-    private boolean combavel;
 
-    public Combo(String nomeCombo, String descricaoCombo, boolean combavel, Fator calculoCombo) {
-        this.nomeCombo = nomeCombo;
-        this.descricaoCombo = descricaoCombo;
+    private boolean preco;
+
+
+    public Combo( String nomeCombo, String descricaoCombo, double preco, boolean combavel, Fator calculo) {
+        super(nomeCombo, descricaoCombo,combavel, preco);
         this.calculoCombo = calculoCombo;
-        this.combavel = combavel;
+
     }
 
-    public boolean isCombavel() {
-        return this.combavel;
-    }
 
+
+    public Fator getCalculo() {
+        return calculoCombo;
+    }
     /**
-     * Equals baseado no nome e na descrição do produto
+     * Metodo responsavel por editar o preco do objeto ProdutoNormal relacionado
      */
+    public void setPreco(double novoPreco) {
+        this.calculoCombo.alterarValor(novoPreco);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Combo)) return false;
         Combo combo = (Combo) o;
-        return Objects.equals(nomeCombo, combo.nomeCombo) &&
-                Objects.equals(descricaoCombo, combo.descricaoCombo);
+        return preco == combo.preco &&
+                Objects.equals(calculoCombo, combo.calculoCombo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nomeCombo, descricaoCombo);
+        return Objects.hash(calculoCombo, preco);
     }
-
-    /**
-     * Criado para retornar representação textual do produto.
-     *
-     * @return String no formato "Nome - descrição - R$preco"
-     */
-    @Override
-    public String toString() {
-        return this.nomeCombo + " - " + this.descricaoCombo + " - R$" + String.format("%.2f", this.getPreco());
-    }
-
-    private String nomeEDescricao() {
-        return this.nomeCombo + " - " + this.descricaoCombo;
-    }
-
-    public double getPreco() {
-        return this.calculoCombo.getPreco();
-    }
-
 }

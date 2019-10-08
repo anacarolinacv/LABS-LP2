@@ -2,11 +2,11 @@ package ids;
 
 import java.util.Objects;
 
-public class ProdutoID implements Id {
+public class ProdutoIDProduto implements IdProduto {
     private String nomeProduto;
     private String descricaoProduto;
 
-    public ProdutoID(String nomeProduto, String descricaoProduto) {
+    public ProdutoIDProduto(String nomeProduto, String descricaoProduto) {
         this.nomeProduto = nomeProduto;
         this.descricaoProduto = descricaoProduto;
     }
@@ -15,7 +15,7 @@ public class ProdutoID implements Id {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ProdutoID produtoID = (ProdutoID) o;
+        ProdutoIDProduto produtoID = (ProdutoIDProduto) o;
         return Objects.equals(nomeProduto, produtoID.nomeProduto) &&
                 Objects.equals(descricaoProduto, produtoID.descricaoProduto);
     }

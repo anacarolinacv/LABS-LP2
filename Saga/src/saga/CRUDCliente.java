@@ -67,7 +67,9 @@ public class CRUDCliente {
      */
     public String exibeTodosOsClientes() {
         String saida = "";
+
         List<Cliente> listClientes = this.ordenaPeloNomeCliente();
+
         for (int i = 0; i < listClientes.size() ; i++) {
             saida += listClientes.get(i).toString() + " | ";
         }
@@ -115,7 +117,7 @@ public class CRUDCliente {
      * Metodo responsavel por ordenar todos os objetos Cliente a partir do seu próprio nome.
      * @return lista ordenada com todos os objetos Cliente já ordenados
      */
-    public List<Cliente> ordenaPeloNomeCliente() {
+    private List<Cliente> ordenaPeloNomeCliente() {
         List listaClientesOrdem = new ArrayList<>(this.clientes.values());
         Collections.sort(listaClientesOrdem);
         return listaClientesOrdem;

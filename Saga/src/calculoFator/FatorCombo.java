@@ -1,16 +1,16 @@
 package calculoFator;
 
-import produtos.Produto;
+import produtos.ProdutoNormal;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class FatorCombo implements Fator {
-    private Set<Produto> produtos;
+    private Set<ProdutoNormal> produtoNormals;
     private double fator;
 
     public FatorCombo(double fator) {
-        this.produtos = new HashSet<>();
+        this.produtoNormals = new HashSet<>();
         this.fator = fator;
     }
 
@@ -18,8 +18,8 @@ public class FatorCombo implements Fator {
     public double getPreco() {
         double somaPreco = 0.0;
 
-        for (Produto produto: this.produtos){
-            somaPreco += produto.getCalculo().getPreco();
+        for (ProdutoNormal produtoNormal : this.produtoNormals){
+            somaPreco += produtoNormal.getCalculo().getPreco();
         }
 
         return somaPreco * (1 - this.fator);

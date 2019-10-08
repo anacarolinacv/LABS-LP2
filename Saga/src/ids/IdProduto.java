@@ -1,6 +1,6 @@
 package ids;
 
-public interface Id {
+public interface IdProduto {
 
     public int hashCode();
     public boolean equals(Object o);

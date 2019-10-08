@@ -2,18 +2,18 @@ package saga;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import produtos.Produto;
+import produtos.ProdutoNormal;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ProdutoTest {
-    Produto p1;
-    Produto p2;
+class ProdutoNormalTest {
+    ProdutoNormal p1;
+    ProdutoNormal p2;
 
     @BeforeEach
     void setUp() {
-        this.p1 = new Produto("Suco","Refri",5.0);
-        this.p2 = new Produto("Torta","Torta de limao",5.9);
+        this.p1 = new ProdutoNormal("Suco","Refri",5.0);
+        this.p2 = new ProdutoNormal("Torta","Torta de limao",5.9);
 
     }
 
@@ -48,14 +48,14 @@ class ProdutoTest {
 
     @Test
     void testEquals() {
-        Produto p3 = new Produto("Refri", "Refri",5.0);
+        ProdutoNormal p3 = new ProdutoNormal("Refri", "Refri",5.0);
         assertFalse(p2.getChave().equals(p1.getChave()));
         assertTrue(p1.getChave().equals(p3.getChave()));
     }
 
     @Test
     void testHashCode() {
-        Produto p3 = new Produto("Suco", "Refri",5.0);
+        ProdutoNormal p3 = new ProdutoNormal("Suco", "Refri",5.0);
         assertTrue(p1.hashCode() == p3.hashCode());
         assertFalse(p2.hashCode() == p3.hashCode());
     }

@@ -47,7 +47,7 @@ class FornecedorTest {
             f1.exibeProduto("c", "e");
             fail();
         } catch (IllegalArgumentException erro) {
-            assertEquals("Produto não cadastrado!", erro.getMessage());
+            assertEquals("ProdutoNormal não cadastrado!", erro.getMessage());
         }
     }
 
@@ -66,13 +66,13 @@ class FornecedorTest {
         f1.editaProduto(4.50, "suco", "bbb");
         assertEquals("suco - bbb - R$4,50", this.f1.exibeProduto("suco", "bbb"));
         try {
-            f1.editaProduto(4.50, "b", "Produto fragil");
+            f1.editaProduto(4.50, "b", "ProdutoNormal fragil");
             fail();
         } catch (IllegalArgumentException erro) {
             assertEquals("Preço novo inválido!", erro.getMessage());
         }
         try {
-            f1.editaProduto(2.50, "  ", "Produto fragil");
+            f1.editaProduto(2.50, "  ", "ProdutoNormal fragil");
             fail();
         } catch (IllegalArgumentException erro) {
             assertEquals("Nome inválido!", erro.getMessage());

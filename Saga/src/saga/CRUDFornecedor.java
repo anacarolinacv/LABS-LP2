@@ -140,7 +140,7 @@ public class CRUDFornecedor {
         this.fornecedores.get(nome).editorFornecedor(parametro, parametroNovo);
     }
     /**
-     * Metodp responsavel por cadastrar o objeto Produto no mapa de produtos do objeto Fornecedor que se relaciona com o nome recebido como parametro
+     * Metodp responsavel por cadastrar o objeto ProdutoNormal no mapa de produtos do objeto Fornecedor que se relaciona com o nome recebido como parametro
      * @param nomeFornecedor
      * @param preco
      * @param nome
@@ -157,18 +157,18 @@ public class CRUDFornecedor {
         this.fornecedores.get(nomeFornecedor).adicionaProduto( nome, descricao, preco);
     }
     /**
-     * Metodo responsavel por exibir a representacao textual do objeto Produto relacionado com o nome e a descricao recebido como paametro.
+     * Metodo responsavel por exibir a representacao textual do objeto ProdutoNormal relacionado com o nome e a descricao recebido como paametro.
      * @param nomeFornecedor
      * @param nome
      * @param descricao
-     * @return String com a representacao textual do objeto Produto relacionado
+     * @return String com a representacao textual do objeto ProdutoNormal relacionado
      */
     public String exibeProduto(String nomeFornecedor, String nome, String descricao) {
         return this.fornecedores.get(nomeFornecedor).exibeProduto(nome, descricao);
     }
 
     /**
-     * Metodo responsavel por editar o preco do objeto Produto relacionado com o nome e descricao recebidos como parametros.
+     * Metodo responsavel por editar o preco do objeto ProdutoNormal relacionado com o nome e descricao recebidos como parametros.
      * @param nomeFornecedor
      * @param precoNovo
      * @param nome

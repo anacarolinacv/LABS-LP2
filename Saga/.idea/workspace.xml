@@ -2,68 +2,179 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c3993c-8d24-40ac-8cc2-427aecffbaec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/easyaccept_4_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/calculoFator/Fator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/calculoFator/FatorCombo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/calculoFator/FatorProduto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ids/ComboID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ids/Id.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ids/ProdutoID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/produtos/Combo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/easyaccept_3_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/produtos/ProdutoAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saga.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Saga.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/allclasses-noframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/doc/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acceptance_tests/use_case_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/acceptance_tests/use_case_3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/lab5/CRUDCliente.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/CRUDCliente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/lab5/CRUDFornecedor.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/CRUDFornecedor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/lab5/Cliente.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/Cliente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/lab5/Facade.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/Facade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/lab5/Fornecedor.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/Fornecedor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/lab5/Produto.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/Produto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/lab5/Util.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/Util.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/lab5/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/lab5/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/lab5/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/lab5/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/doc/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/CRUDCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/CRUDCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/CRUDFornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/CRUDFornecedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/Facade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/Fornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/Fornecedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/produtos/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab5/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/lab5/CRUDClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/saga/CRUDClienteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/lab5/CRUDFornecedorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/saga/CRUDFornecedorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/lab5/ClienteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/saga/ClienteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/lab5/FornecedorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/saga/FornecedorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/lab5/ProdutoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/saga/ProdutoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calculoFator/FatorCombo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculoFator/FatorCombo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ids/ComboID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ids/ComboIDProduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ids/Id.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ids/IdProduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ids/ProdutoID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ids/ProdutoIDProduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/produtos/Combo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/produtos/Combo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/produtos/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/produtos/ProdutoNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/saga/CRUDCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/CRUDCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/saga/CRUDFornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/CRUDFornecedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/saga/Fornecedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/saga/Fornecedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/saga/FornecedorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/saga/FornecedorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/saga/ProdutoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/saga/ProdutoNormalTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-617424376">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="58" />
+          <entry key="java" value="540" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="540" />
+          <entry key="PLAIN_TEXT" value="58" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="20" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/saga/Fornecedor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2015">
+              <caret line="253" column="62" lean-forward="true" selection-start-line="253" selection-start-column="62" selection-end-line="253" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/saga/CRUDFornecedorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/saga/CRUDCliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-40">
+              <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="26" column="44" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/produtos/ProdutoAbstract.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+              <folding>
+                <element signature="e#1101#1102#0" expanded="true" />
+                <element signature="e#1128#1129#0" expanded="true" />
+                <element signature="e#1316#1317#0" expanded="true" />
+                <element signature="e#1348#1349#0" expanded="true" />
+                <element signature="e#1551#1552#0" expanded="true" />
+                <element signature="e#1590#1591#0" expanded="true" />
+                <element signature="e#1798#1799#0" expanded="true" />
+                <element signature="e#1819#1820#0" expanded="true" />
+                <element signature="e#1967#1968#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/produtos/Combo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+              <folding>
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
+                <element signature="e#526#527#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#901#902#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ids/IdProduto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ids/ProdutoIDProduto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="19" column="77" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/produtos/ProdutoNormal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+              <folding>
+                <element signature="e#1273#1274#0" expanded="true" />
+                <element signature="e#1303#1304#0" expanded="true" />
+                <element signature="e#1439#1440#0" expanded="true" />
+                <element signature="e#1491#1492#0" expanded="true" />
+                <element signature="e#3056#3057#0" expanded="true" />
+                <element signature="e#3100#3101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/saga/ProdutoNormalTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="23" column="52" lean-forward="true" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -77,8 +188,82 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/ids/ComboID.java" />
+        <option value="$PROJECT_DIR$/src/saga/CRUDFornecedor.java" />
+        <option value="$PROJECT_DIR$/src/produtos/Produto.java" />
+        <option value="$PROJECT_DIR$/src/saga/CRUDCliente.java" />
+        <option value="$PROJECT_DIR$/src/ids/IdProduto.java" />
+        <option value="$PROJECT_DIR$/src/produtos/ProdutoNormal.java" />
+        <option value="$PROJECT_DIR$/src/produtos/Combo.java" />
+        <option value="$PROJECT_DIR$/src/produtos/ProdutoAbstract.java" />
+        <option value="$PROJECT_DIR$/src/saga/Fornecedor.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1ROOWTbtuDU9xTo1lqZ28owW928" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Saga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Saga" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Saga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Saga" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Saga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Saga" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ids" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Saga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Saga" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="produtos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Saga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Saga" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="saga" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Saga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Saga" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Saga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Saga" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="saga" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Saga" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -87,9 +272,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570537956821" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/easyaccept(4).jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -201,6 +387,38 @@
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49837488" visible="true" weight="0.25235197" />
+      <window_info id="Structure" order="6" sideWeight="0.5016251" side_tool="true" weight="0.24958494" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="5" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Palette&#9;" order="2" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info anchor="right" id="Module Dependencies" order="8" weight="0.32982844" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -210,6 +428,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -224,5 +448,139 @@
     <MESSAGE value="Testes do sistema" />
     <MESSAGE value="Testes do sistema e documentação atualizada" />
     <option name="LAST_COMMIT_MESSAGE" value="Testes do sistema e documentação atualizada" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/calculoFator/FatorCombo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/saga/FornecedorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1625">
+          <caret line="25" column="79" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ids/ComboIDProduto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ids/ProdutoIDProduto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="77" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saga/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="133" column="1" lean-forward="true" selection-start-line="130" selection-start-column="13" selection-end-line="133" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/saga/CRUDFornecedorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saga/CRUDFornecedor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saga/CRUDCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ids/IdProduto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/Combo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding>
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/ProdutoAbstract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+          <folding>
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1590#1591#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
+            <element signature="e#1967#1968#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/produtos/ProdutoNormal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding>
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#3056#3057#0" expanded="true" />
+            <element signature="e#3100#3101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/saga/ProdutoNormalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="23" column="52" lean-forward="true" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/saga/Fornecedor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2015">
+          <caret line="253" column="62" lean-forward="true" selection-start-line="253" selection-start-column="62" selection-end-line="253" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
