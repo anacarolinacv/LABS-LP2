@@ -1,7 +1,8 @@
-package lab5;
+package saga;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import produtos.Produto;
 
 import static org.junit.jupiter.api.Assertions.*;
 

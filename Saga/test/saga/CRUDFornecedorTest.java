@@ -1,4 +1,4 @@
-package lab5;
+package saga;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

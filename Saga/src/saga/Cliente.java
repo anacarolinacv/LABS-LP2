@@ -1,11 +1,13 @@
-package lab5;
+package saga;
+
+import util.Util;
 
 import java.util.Objects;
 
 /**
  * Classe Cliente responsavel por criar objetos Clientes a partir dos seus proprios atributos e funcoes.
  */
-public class Cliente {
+public class Cliente implements Comparable<Cliente> {
     /**
      * Atributo responsavel por armazenar o cpf do objeto do tipo Cliente
      */
@@ -123,5 +125,10 @@ public class Cliente {
     @Override
     public String toString() {
         return String.format("%s - %s - %s", getNome(), getLocalizacao(), getEmail());
+    }
+
+    @Override
+    public int compareTo(Cliente cliente) {
+        return this.nome.toUpperCase().compareTo(cliente.getNome().toUpperCase());
     }
 }

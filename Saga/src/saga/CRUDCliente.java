@@ -1,6 +1,7 @@
-package lab5;
-import java.util.HashMap;
-import java.util.Map;
+package saga;
+import util.Util;
+
+import java.util.*;
 
 /**
  * Classe CRUDCliente responsavel por controlar todas as acoes que os objetos do tipo Cliente irao realizar no sistema.
@@ -66,10 +67,11 @@ public class CRUDCliente {
      */
     public String exibeTodosOsClientes() {
         String saida = "";
-        for (int i = 0; i < this.clientes.size() ; i++) {
-            saida += this.clientes.get(i).toString() + " | ";
+        List<Cliente> listClientes = this.ordenaPeloNomeCliente();
+        for (int i = 0; i < listClientes.size() ; i++) {
+            saida += listClientes.get(i).toString() + " | ";
         }
-        saida = saida.substring(0, clientes.size() -1);
+        saida = saida.substring(0, clientes.size() - 3);
         return saida;
     }
 
@@ -107,5 +109,15 @@ public class CRUDCliente {
             throw new IllegalArgumentException("Erro na edicao do cliente: cliente nao existe.");
         }
         this.clientes.get(cpf).editorCadastroCliente(atributo,atributoNovo);
+    }
+
+    /**
+     * Metodo responsavel por ordenar todos os objetos Cliente a partir do seu próprio nome.
+     * @return lista ordenada com todos os objetos Cliente já ordenados
+     */
+    public List<Cliente> ordenaPeloNomeCliente() {
+        List listaClientesOrdem = new ArrayList<>(this.clientes.values());
+        Collections.sort(listaClientesOrdem);
+        return listaClientesOrdem;
     }
 }

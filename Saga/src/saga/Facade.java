@@ -1,4 +1,4 @@
-package lab5;
+package saga;
 
 import easyaccept.EasyAccept;
 
@@ -67,7 +67,7 @@ public class Facade {
 
     public static void main(String[] args) {
         args = new String[] {
-                "lab5.Facade",
+                "saga.Facade",
                 "acceptance_tests/use_case_1.txt", "acceptance_tests/use_case_2.txt",
                 "acceptance_tests/use_case_3.txt",
         };

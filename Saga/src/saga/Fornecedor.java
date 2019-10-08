@@ -1,12 +1,20 @@
-package lab5;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+package saga;
+import calculoFator.Fator;
+import calculoFator.FatorCombo;
+import calculoFator.FatorProduto;
+import ids.ComboID;
+import ids.Id;
+import ids.ProdutoID;
+import produtos.Combo;
+import produtos.Produto;
+import util.Util;
+
+import java.util.*;
 
 /**
  * Classe Fornecedor responsavel por criar objetos do seu tipo que carregam funcoes de armazenamento e cadastro de objetos do tipo Produto.
  */
-public class Fornecedor {
+public class Fornecedor implements Comparable<Fornecedor> {
     /**
      * Atributo responsavel por armazenar o nome do objeto do tipo Fornecedor
      */
@@ -22,8 +30,7 @@ public class Fornecedor {
     /**
      * Atributo responsavel por armazenar objetos do tipo Produto que o objeto Fornecedor sera responsavel de armazenar
      */
-    private Map<String, Produto> produtos;
-
+    private Map<Id, Produto> produtos;
     /**
      * Construtor da classe Fornecedor responsavel por criar objetos atraves de atributos relacionados.
      * @param nome
@@ -31,9 +38,9 @@ public class Fornecedor {
      * @param telefone
      */
     public Fornecedor(String nome, String email, String telefone) {
-        Util.validadorString(nome,"Nome inválido!");
-        Util.validadorString(email, "Email inválido!");
-        Util.validadorString(telefone,"Telefone inválido!");
+        Util.validadorString(nome,"Erro na criação do fornecedor: nome do fornecedor nao pode ser vazio ou nulo.");
+        Util.validadorString(email, "Erro na criação do fornecedor: email do fornecedor nao pode ser vazio ou nulo.");
+        Util.validadorString(telefone,"Erro na criação do fornecedor: telefone do fornecedor nao pode ser vazio ou nulo.");
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
@@ -51,11 +58,12 @@ public class Fornecedor {
         Util.validadorPreco(preco,"Erro no cadastro de produto: preco invalido.");
         Util.validadorString(nome, "Erro no cadastro de produto: nome nao pode ser vazia ou nula.");
         Util.validadorString(descricao, "Erro no cadastro de produto: descricao nao pode ser vazia ou nula.");
-        String chave = nome + descricao;
-        if(this.produtos.containsKey(chave)) {
+        Id produtoID = new ProdutoID(nome.toLowerCase(), descricao.toLowerCase());
+        if(this.produtos.containsKey(produtoID)) {
             throw new IllegalArgumentException("Erro no cadastro de produto: produto ja existe.");
         } else {
-            this.produtos.put(chave, new Produto(nome, descricao, preco));
+            Fator calculoProduto = new FatorProduto(preco);
+            this.produtos.put(produtoID, new Produto(nome,descricao, preco, true, calculoProduto));
             saida = true;
         }
         return saida;
@@ -71,11 +79,11 @@ public class Fornecedor {
         Util.validadorString(nome, "Erro na exibicao de produto: nome nao pode ser vazio ou nulo.");
         Util.validadorString(descricao, "Erro na exibicao de produto: descricao nao pode ser vazio ou nulo.");
         String saida = "";
-        String chave = nome + descricao;
-        if(!(this.produtos.containsKey(chave))) {
+        Id produtoID = new ProdutoID(nome.toLowerCase(), descricao.toLowerCase());
+        if(!(this.produtos.containsKey(produtoID))) {
             throw new IllegalArgumentException("Erro na exibicao de produto: produto nao existe.");
         }
-        saida = this.produtos.get(chave).toString();
+        saida = this.produtos.get(produtoID).toString();
         return saida;
     }
 
@@ -85,10 +93,12 @@ public class Fornecedor {
      */
     public String exibeProdutosDoFornecedor() {
         String saida = "";
-        for (int i = 0; i < this.produtos.size() ; i++) {
-            saida += getNome() + "-" + this.produtos.get(i).toString() + " | ";
+        List<Produto> fornecedoresLista = this.ordenaProdutosPeloNome();
+
+        for (int i = 0; i < fornecedoresLista.size() ; i++) {
+            saida += getNome() + "-" + fornecedoresLista.get(i).toString() + " | ";
         }
-        saida = saida.substring(0, this.produtos.size() -3);
+        saida = saida.substring(0, fornecedoresLista.size() -3);
         return saida;
     }
 
@@ -102,8 +112,8 @@ public class Fornecedor {
         Util.validadorPreco(precoNovo, "Erro na edicao de produto: preco invalido.");
         Util.validadorString(nome, "Erro na edicao de produto: descricao nao pode ser vazio ou nulo.");
         Util.validadorString(descricao, "Erro na edicao de produto: descricao nao pode ser vazia ou nula.");
-        String chave = nome + descricao;
-        this.produtos.get(chave).setPreco(precoNovo);
+        ProdutoID id = new ProdutoID(nome.toUpperCase(), descricao.toUpperCase());
+        this.produtos.get(id).setPreco(precoNovo);
     }
 
     /**
@@ -114,11 +124,11 @@ public class Fornecedor {
     public void removeProduto(String nome, String descricao) {
         Util.validadorString(nome, "Erro na edicao de produto: nome nao pode ser vazio ou nulo.");
         Util.validadorString(descricao, "Erro na edicao de produto: descricao nao pode ser vazia ou nula.");
-        String chave = nome + descricao;
-        if(!(this.produtos.containsKey(chave))) {
+        Id produtoID = new ProdutoID(nome.toLowerCase(), descricao.toLowerCase());
+        if(!(this.produtos.containsKey(produtoID))) {
             throw new IllegalArgumentException("Erro na edicao de produto: produto nao existe.");
         } else {
-            this.produtos.remove(chave);
+            this.produtos.remove(produtoID);
         }
     }
 
@@ -192,4 +202,75 @@ public class Fornecedor {
     public String toString() {
         return String.format("%s - %s - %s", getNome(), getEmail(), getTelefone());
     }
+
+    /**
+     * Comparador baseado no nome do objeto Fornecedor
+     * @param fornecedor
+     */
+    @Override
+    public int compareTo(Fornecedor fornecedor) {
+        return this.nome.toLowerCase().compareTo(fornecedor.nome.toLowerCase());
+    }
+
+    /**
+     * Metodo responsavel por ordenar todos os objetos Produto contidos a partir do seu nome.
+     * @return lista ordenada com todos os objetos Produto ja cadastrados
+     */
+    public List<Produto> ordenaProdutosPeloNome() {
+        List<Produto> listProdutosOrdem = new ArrayList<>(this.produtos.values());
+        Collections.sort(listProdutosOrdem);
+        return listProdutosOrdem;
+    }
+
+    public void adicionaCombo(String nome, String descricao, double fator, String produtosCombo) {
+        ProdutoID comboId = new ProdutoID(nome.toLowerCase(), descricao.toLowerCase());
+        String[] produtosEDescricao = this.listaProdutosString(produtosCombo);
+        Util.validadorString(nome, "Erro no cadastro de combo: nome nao pode ser vazio ou nulo.");
+        Util.validadorString(descricao, "Erro no cadastro de combo: descricao nao pode ser vazia ou nula.");
+        Util.validadorString(produtosCombo, "Erro no cadastro de combo: combo deve ter produtos.");
+
+        if (fator <= 0 || fator >= 1) {
+            throw new IllegalArgumentException("Erro no cadastro de combo: fator invalido.");
+        } else if (this.existeOProduto(comboId)) {
+            throw new IllegalArgumentException("Erro no cadastro de combo: combo ja existe.");
+        }
+
+        Set<Produto> produtoParaCombo = new HashSet<>();
+
+        for (int i = 0; i < produtosEDescricao.length; i += 2) {
+            String nomeProduto = produtosEDescricao[i].toLowerCase().trim();
+            String descricaoProduto = produtosEDescricao[i + 1].toLowerCase().trim();
+            Id produto = new ProdutoID(nomeProduto, descricaoProduto);
+
+            if (!(this.existeOProduto(produto))) {
+                throw new IllegalArgumentException("Erro no cadastro de combo: produto nao existe.");
+            } else if (!(this.getProduto(comboId))) {
+                throw new IllegalArgumentException("Erro no cadastro de combo: um combo nao pode possuir combos na lista de produtos.");
+            }
+
+            produtoParaCombo.add(this.produtos.get(produto));
+        }
+
+        Fator fatorCombo = new FatorCombo(fator);
+        this.produtos.put(comboId, new Combo(nome, descricao, false, fatorCombo));
+
+    }
+    public boolean existeOProduto(Id produto) {
+        if (this.produtos.containsKey(produto)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private String[] listaProdutosString(String produtos) {
+        String[] listaProdutos = produtos.replace(", "," - ").split(" - ");
+        return listaProdutos;
+    }
+
+    public Produto getProduto(Id produto) {
+        return this.produtos.get(produto);
+    }
+
+
 }

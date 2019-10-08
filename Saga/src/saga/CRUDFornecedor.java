@@ -1,6 +1,7 @@
-package lab5;
-import java.util.HashMap;
-import java.util.Map;
+package saga;
+import util.Util;
+
+import java.util.*;
 
 /**
  * Classe CRUDFornecedor responsavel por controlar todas as acoes que os objetos Fornecedore necessitam realizar no sistema
@@ -73,13 +74,15 @@ public class CRUDFornecedor {
      */
     public String exibeTodosOsFornecedores() {
         String saida = "";
-        for (int i = 0; i < this.fornecedores.size(); i++) {
-            saida += this.fornecedores.get(i).toString() + "|";
+        List<Fornecedor> listFornecedor = this.ordenaFornecedorPeloNome();
+
+        for (int i = 0; i < listFornecedor.size(); i++) {
+
+            saida += listFornecedor.get(i).toString() + "|";
         }
-        saida = saida.substring(0, this.fornecedores.size()-1);
+        saida = saida.substring(0, listFornecedor.size() -1);
         return saida;
     }
-
     /**
      * Metodo responsavel por remover o objeto Fornecedor a partir do nome relacionado com ele.
      * @param nome
@@ -178,6 +181,16 @@ public class CRUDFornecedor {
             throw new IllegalArgumentException("Erro na edicao de produto: fornecedor nao existe.");
         }
         this.fornecedores.get(nomeFornecedor).editaProduto(precoNovo, nome, descricao);
+    }
+
+    /**
+     * Metodo responsavel por ordenar os objetos Fornecedores cadastrados a partir do nome deles
+     * @return lista ordenada relacionando o nome dos objetos contidos.
+     */
+    private List<Fornecedor> ordenaFornecedorPeloNome() {
+        List<Fornecedor> fornecedorOrdem = new ArrayList<>(this.fornecedores.values());
+        Collections.sort(fornecedorOrdem);
+        return fornecedorOrdem;
     }
 
 
