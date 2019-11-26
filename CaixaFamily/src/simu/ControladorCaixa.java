@@ -2,10 +2,7 @@ package simu;
 
 import util.Validador;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static util.Validador.*;
 
@@ -20,7 +17,8 @@ public class ControladorCaixa {
         if (this.caixas.containsKey(descUnica)) {
             validaCaixaJaExistente();
         } else {
-            this.caixas.put(descUnica, new CaixaPentagonal(descUnica, personalizacao, lado));
+            this.caixas.put(descUnica, new Caixa(descUnica, personalizacao));
+            this.caixas.get(descUnica).setFormato(new CaixaPentagonal(lado));
         }
     }
 
@@ -28,7 +26,9 @@ public class ControladorCaixa {
         if (this.caixas.containsKey(descUnica)) {
             validaCaixaJaExistente();
         } else {
-            this.caixas.put(descUnica, new CaixaRetangular(descUnica, personalizacao, lado1, lado2));
+            this.caixas.put(descUnica, new Caixa(descUnica, personalizacao));
+            this.caixas.get(descUnica).setFormato(new CaixaRetangular(lado1, lado2));
+
         }
     }
 
@@ -36,7 +36,8 @@ public class ControladorCaixa {
         if (this.caixas.containsKey(descUnica)) {
             validaCaixaJaExistente();
         } else {
-            this.caixas.put(descUnica, new CaixaCircular(descUnica, personalizacao, raio));
+            this.caixas.put(descUnica, new Caixa(descUnica, personalizacao));
+            this.caixas.get(descUnica).setFormato(new CaixaCircular(raio));
         }
     }
 
@@ -65,23 +66,56 @@ public class ControladorCaixa {
     }
 
     public boolean contem(String personalizacao, String formato) {
-        for (int i = 0; i < this.caixas.size() ; i++) {
-            if(this.caixas.)
+        for (Caixa caixa : this.caixas.values()) {
+            if (caixa.getPersonalizacao().equals(personalizacao) && caixa.getFormato().equals(formato)) {
+                return true;
+            }
         }
+
+        return false;
     }
-
+    // EU NAO SEI RETORNAR UMA LISTA FODASE
     public List<String> getCaixasMesmoTipo(String personalizacao ){
-        List lista = new ArrayList();
-        for (String i: this.caixas) {
+        String saida = "";
+        List<Caixa> caixaPersonalizadasList = new ArrayList<>(this.caixas.values());
+        Collections.sort(caixaPersonalizadasList);
 
+        for (Caixa caixaPersonalizada : caixaPersonalizadasList) {
+            if (caixaPersonalizada.getPersonalizacao().equals(personalizacao)) {
+                saida += caixaPersonalizada.toString() + ", ";
+            }
         }
-        return caixas;
+
+        if (saida.length() > 0) {
+            saida = saida.substring(0, saida.length() - 2);
+        }
+
+        return saida;
+    }
+    public List<String> getCaixasMesmoTipo(String formato ){
+        String saida = "";
+        List<Caixa> caixaPersonalizadasList = new ArrayList<>(this.caixas.values());
+        Collections.sort(caixaPersonalizadasList);
+
+        for (Caixa caixaPersonalizada : caixaPersonalizadasList) {
+            if (caixaPersonalizada.getFormato().equals(formato)) {
+                saida += caixaPersonalizada.toString() + ", ";
+            }
+        }
+
+        if (saida.length() > 0) {
+            saida = saida.substring(0, saida.length() - 2);
+        }
+
+        return saida;
     }
 
     public double calcularRendimentos() {
         double saida = 0.0;
-        for (int i = 0; i < this.caixas.size() ; i++) {
-            saida +=
+        for (Caixa caixa : this.caixas.values()) {
+            saida += caixa.calculaPreco();
         }
+
+        return saida;
     }
 }
